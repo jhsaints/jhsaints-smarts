@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    
+    <a routerLink="Dashboard" routerLinkActive="active" class="navbar-brand" >Smart School</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div  class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav   ">
+        <li class="nav-item" routerLinkActive="active"> <!-- observar se vai dar problema pq deveria ser "nav-item active"-->
+                  
+          <a routerLink="Alunos" routerLinkActive="active" class="nav-link" aria-current="page">Alunos</a> <!-- Esses codigos pode ser analisado em app.components.html geral com mais detalhes, criei um a um, tbm serve para indicar o link da navegação direto no app.component.html, tendo ligação direta com app-routing.module.ts criando os path, só acrescentou aqui funções a mais para navegação-->
+          
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          
+          <a routerLink="Professores"  class="nav-link" >Professores</a>
+          
+        </li>
+
+        
+          </ul>               
+      
+    </div>
+    
+
+
+     <ul class="navbar-nav" dropdown>
+      <li class="nav-item dropdown">
+     <a id="button-basic" dropdownToggle class="nav-link dropdown-toggle   " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+       Jonathan
+     </a>
+     <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li><a class="dropdown-item" href="#">Cadastrar</a></li>      
+      <li><a routerLink="Perfil" class="dropdown-item" href="#">Perfil</a></li>
+       <li><a class="dropdown-item" href="#">Sair</a></li>
+     </ul>
+   </li>
+   
+ </ul>
+ <!-- Separei o dropdown link dos demais itens do menu para colocar ele no canto, usando o mr-auto que obriga ele ir para o canto -->
+  </div>
+</nav>
+
+
+
+<!--
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a  href="#">Navbar</a>
+    
+    <a routerLink="Dashboard" class="navbar-brand" >Smart School</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">                ////-********* observar se vai dar problema pq deveria ser "nav-item active"
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          
+          <a routerLink="Alunos">Alunos</a>  //// ***** Esses codigos pode ser analisado em app.components.html geral com mais detalhes, criei um a um, tbm serve para indicar o link da navegação direto no app.component.html, tendo ligação direta com app-routing.module.ts criando os path-
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+          
+          <a routerLink="Professores">Professores</a>
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+          
+          <a routerLink="Perfil">Perfil</a>    
+          
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+-->
