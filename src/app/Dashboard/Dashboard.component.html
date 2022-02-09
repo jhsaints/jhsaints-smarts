@@ -1,4 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSchool</title>
+</head>
+
 <app-titulo [titulo]="titulo"></app-titulo>
 <p>
   Dashboard works!
 </p>
+
+<body onload="carregar()">
+  
+
+<header>
+ 
+  <h1  style="font: normal 15pt arial;background-color: black; color: white; width: 250px; margin-left: 75%; text-align: center;">  <strong>Hora do Dia</strong> </h1>
+</header>
+
+<!-- style="margin-left: 75%; text-align: center; width: 250px;" -->
+
+<section>
+  <div id="msg" style="margin-left: 75%; text-align: center; width: 250px;" > Bom dia, agora são 10 horas da manhã!</div>
+
+  <div id="foto" style="width: 250px; height: 250px; margin-left: 75%; margin-top: 0px; border: 10px;">
+
+    <img id="imag" src="fotomanha.png" alt="Foto do dia" >
+
+</div>
+</section>
+
+
+<footer>
+<p style="color: blue; text-align: center; margin-left: 75%; width: 250px;">
+<strong>Welcome Jonathan!</strong> 
+
+</p>
+</footer>
+
+
+
+<script>
+
+function carregar() 
+{
+                    var msg = window.document.getElementById("msg")
+                   
+                    var imagem = window.document.getElementById('imag')
+                    var data = new data()
+                    var hora = data.getHours()
+                    msg.innerHTML= `Bom dia, agora são ${hora} da manhã!`   
+}
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+

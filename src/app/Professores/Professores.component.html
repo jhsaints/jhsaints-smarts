@@ -1,36 +1,57 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSchol</title>
+</head>
+<body>
+ 
 
 <div *ngIf="professorSelecionado">
   
 
-  <div class="row">
+  <section class="row">
 
     <div class="col-sm-6">
-    <app-titulo [titulo]="professorSelecionado" ></app-titulo>
+    <app-titulo [titulo]="'Professor: ' + professorSelecionado" ></app-titulo>
    
   </div>
 
   <div class="col-sm-6" style="text-align: end;">
     <button class= "btn btn-warning" (click)="voltar()" > Lista de Alunos</button>
+    
   </div>
   
-</div>
+  </section>
   
 <!-- *ngFor="let professor of Professores"       [value]="professor.nome"-->
+<!--  -->
+     <!-- 
+     1 - Selecionar Professor
+     2 - Clicar em Professor
+     3 - Abrir nova page
+     4 - Form correspondente aos dados da array Professores
+     5 - Linkar dados da array com o formulario
+     6 - exibir dados do professor selecionado no input criado value="" -->
 
 <form>
 
-  <div class="mb-3"  *ngFor="let professor of Professores">
+  <div id="fomr1" class="mb-3"  >
       <label for="formGroupExampleInput" class="form-label">Nome</label>
-      <input type="text" class="form-control" [value]="professor.nome">
+      <input type="text" class="form-control" [value]="professorSelecionado">
     
     <div class="mb-3"  >
-      <label for="formGroupExampleInput2" class="form-label">Disciplina</label>
-      <input type="text" class="form-control" [value]="professor.disciplina">
+      <label for="formGroupExampleInput2" scope="row" class="form-label">Disciplina</label>
+      <input type="text" class="form-control" [value]="professorSelecionado">
     </div>
   </div>
+
+
     </form>
 
+    
 </div>
 
 <div *ngIf="!professorSelecionado">
@@ -56,4 +77,11 @@
     </tbody>
   </table>
 
-</div>
+</div> 
+</body>
+</html>
+
+
+
+
+
